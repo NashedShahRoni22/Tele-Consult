@@ -1,14 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff; */
+  /* --foreground: #111111; */
+  
+  /* Primary Green Colors */
+  --primary: #22c55e;
+  --primary-dark: #16a34a;
+  --primary-light: #4ade80;
+  --primary-50: #f0fdf4;
+  --primary-100: #dcfce7;
+  --primary-600: #16a34a;
+  --primary-700: #15803d;
+  
+  /* Font Variables */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-jakarta);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -20,7 +37,18 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background: var(--background); */
+  /* color: var(--foreground); */
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Headings use Poppins */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+}
+
+/* Body text uses Plus Jakarta Sans (alternative) */
+p, span, div {
+  font-family: var(--font-jakarta), var(--font-inter), sans-serif;
 }
