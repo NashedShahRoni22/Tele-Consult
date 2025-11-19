@@ -27,6 +27,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Consultation", href: "/consultation" },
     { name: "Doctors", href: "/doctors" },
+    { name: "Departments", href: "/departments" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
@@ -117,7 +118,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="sync">
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}

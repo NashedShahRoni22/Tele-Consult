@@ -7,6 +7,7 @@ import {
   Star,
   MessageSquare,
 } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero({ fadeInUp, staggerContainer }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -76,7 +77,7 @@ export default function Hero({ fadeInUp, staggerContainer }) {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  className="hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
                   Search
                 </motion.button>
@@ -117,16 +118,9 @@ export default function Hero({ fadeInUp, staggerContainer }) {
           >
             <div className="relative">
               {/* Placeholder for illustration - you can replace with actual image */}
-              <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-3xl p-8 aspect-square flex items-center justify-center">
-                <div className="text-center">
-                  <Stethoscope
-                    size={120}
-                    className="text-green-600 mx-auto mb-4"
-                  />
-                  <p className="text-gray-600 font-medium">
-                    Doctor Consultation Illustration
-                  </p>
-                </div>
+              <div className="aspect-square flex items-center justify-center">
+                {/* <Spline scene="https://prod.spline.design/D4MddUFS5Fqe0Q5T/scene.splinecode"  /> */}
+                <Spline scene="https://prod.spline.design/Bh3BTTWX7CzH6IR1/scene.splinecode"  />
               </div>
 
               {/* Floating elements */}
